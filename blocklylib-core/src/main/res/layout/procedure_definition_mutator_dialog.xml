@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="?dialogPreferredPadding"
+              android:paddingEnd="?dialogPreferredPadding"
+              android:paddingRight="?dialogPreferredPadding"
+              android:paddingLeft="?dialogPreferredPadding">
+    <TextView
+        android:id="@+id/mutator_procedure_def_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mutator_procedure_def_header_format"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mutator_procedure_def_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

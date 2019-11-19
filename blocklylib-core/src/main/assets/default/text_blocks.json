@@ -1,0 +1,320 @@
+[
+  {
+    "type": "text",
+    "message0": "%1 %2 %3",
+    "args0": [
+      {
+        "type": "field_image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAQAAAAqJXdxAAAAn0lEQVQI1z3OMa5BURSF4f/cQhAKjUQhuQmFNwGJEUi0RKN5rU7FHKhpjEH3TEMtkdBSCY1EIv8r7nFX9e29V7EBAOvu7RPjwmWGH/VuF8CyN9/OAdvqIXYLvtRaNjx9mMTDyo+NjAN1HNcl9ZQ5oQMM3dgDUqDo1l8DzvwmtZN7mnD+PkmLa+4mhrxVA9fRowBWmVBhFy5gYEjKMfz9AylsaRRgGzvZAAAAAElFTkSuQmCC",
+        "width": 12,
+        "height": 12,
+        "alt": "\u201C"
+      },
+      {
+        "type": "field_input",
+        "name": "TEXT",
+        "text": ""
+      },
+      {
+        "type": "field_image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAQAAAAqJXdxAAAAqUlEQVQI1z3KvUpCcRiA8ef9E4JNHhI0aFEacm1o0BsI0Slx8wa8gLauoDnoBhq7DcfWhggONDmJJgqCPA7neJ7p934EOOKOnM8Q7PDElo/4x4lFb2DmuUjcUzS3URnGib9qaPNbuXvBO3sGPHJDRG6fGVdMSeWDP2q99FQdFrz26Gu5Tq7dFMzUvbXy8KXeAj57cOklgA+u1B5AoslLtGIHQMaCVnwDnADZIFIrXsoXrgAAAABJRU5ErkJggg==",
+        "width": 12,
+        "height": 12,
+        "alt": "\u201D"
+      }
+    ],
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_TEXT_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_TEXT_HELPURL}"
+  },
+  {
+    "type": "text_append",
+    "message0": "%{BKY_TEXT_APPEND_TITLE}",
+    "args0": [
+      {
+        "type": "field_variable",
+        "name": "VAR",
+        "variable": "%{BKY_TEXT_APPEND_VARIABLE}"
+      },
+      {
+        "type": "input_value",
+        "name": "TEXT",
+        "check": "String"
+      }
+    ],
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "helpUrl": "%{TEXT_APPEND_HELPURL}",
+    "tooltip": "%{TEXT_APPEND_TOOLTIP}",
+    "TODO(#386)": "https://github.com/google/blockly-android/issues/386"
+  },
+  {
+    "type": "text_length",
+    "message0": "%{BKY_TEXT_LENGTH_TITLE}",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "check": ["String", "Array"]
+      }
+    ],
+    "output": "Number",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_LENGTH_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_LENGTH_HELPURL}"
+  },
+  {
+    "type": "text_isEmpty",
+    "message0": "%{BKY_TEXT_ISEMPTY_TITLE}",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "check": ["String", "Array"]
+      }
+    ],
+    "inputsInline": true,
+    "output": "Boolean",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_ISEMPTY_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_ISEMPTY_HELPURL}"
+  },
+  {
+    "type": "text_indexOf",
+    "message0": "%{BKY_TEXT_INDEXOF_TITLE}",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "check": "String"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "END",
+        "options": [
+          [
+            "%{BKY_TEXT_INDEXOF_OPERATOR_FIRST}",
+            "FIRST"
+          ],
+          [
+            "%{BKY_TEXT_INDEXOF_OPERATOR_LAST}",
+            "LAST"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "FIND",
+        "check": "String"
+      }
+    ],
+    "inputsInline": true,
+    "output": "Number",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_INDEXOF_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_INDEXOF_HELPURL}"
+  },
+  {
+    "type": "text_charAt",
+    "message0": "%{BKY_TEXT_CHARAT_TITLE} %3",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "VALUE",
+        "check": "String"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "WHERE",
+        "options": [
+          [
+            "%{BKY_TEXT_CHARAT_FROM_START}",
+            "FROM_START"
+          ],
+          [
+            "%{BKY_TEXT_CHARAT_FROM_END}",
+            "FROM_END"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "AT",
+        "check": "Number"
+      }
+    ],
+    "inputsInline": true,
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_CHARAT_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_CHARAT_HELPURL}",
+    "TODO(#390)": "https://github.com/google/blockly-android/issues/390"
+  },
+  {
+    "type": "text_getSubstring",
+    "message0": "%{BKY_TEXT_GET_SUBSTRING_INPUT_IN_TEXT} %1 %2 %3 %4 %5",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "STRING",
+        "check": "String"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "WHERE1",
+        "options": [
+          [
+            "%{BKY_TEXT_GET_SUBSTRING_START_FROM_START}",
+            "FROM_START"
+          ],
+          [
+            "%{BKY_TEXT_GET_SUBSTRING_START_FROM_END}",
+            "FROM_END"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "AT1",
+        "check": "Number"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "WHERE2",
+        "options": [
+          [
+            "%{BKY_TEXT_GET_SUBSTRING_END_FROM_START}",
+            "FROM_START"
+          ],
+          [
+            "%{BKY_TEXT_GET_SUBSTRING_END_FROM_END}",
+            "FROM_END"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "AT2",
+        "check": "Number"
+      }
+    ],
+    "inputsInline": true,
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_GET_SUBSTRING_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_CHARAT_HELPURL}",
+    "TODO(#391)": "https://github.com/google/blockly-android/issues/391"
+  },
+  {
+    "type": "text_changeCase",
+    "message0": "%1 %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "CASE",
+        "options": [
+          [
+            "%{BKY_TEXT_CHANGECASE_OPERATOR_UPPERCASE}",
+            "UPPERCASE"
+          ],
+          [
+            "%{BKY_TEXT_CHANGECASE_OPERATOR_LOWERCASE}",
+            "LOWERCASE"
+          ],
+          [
+            "%{BKY_TEXT_CHANGECASE_OPERATOR_TITLECASE}",
+            "TITLECASE"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "TEXT",
+        "check": "String"
+      }
+    ],
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_CHANGECASE_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_CHANGECASE_HELPURL}"
+  },
+  {
+    "type": "text_trim",
+    "message0": "%1 %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "MODE",
+        "options": [
+          [
+            "%{BKY_TEXT_TRIM_OPERATOR_BOTH}",
+            "BOTH"
+          ],
+          [
+            "%{BKY_TEXT_TRIM_OPERATOR_LEFT}",
+            "LEFT"
+          ],
+          [
+            "%{BKY_TEXT_TRIM_OPERATOR_RIGHT}",
+            "RIGHT"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "TEXT",
+        "check": "String"
+      }
+    ],
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_TRIM_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_TRIM_HELPURL}"
+  },
+  {
+    "type": "text_print",
+    "message0": "%{BKY_TEXT_PRINT_TITLE}",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "TEXT"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_PRINT_TOOLTIP}",
+    "helpUrl": "%{BKY_TEXT_PRINT_HELPURL}"
+  },
+  {
+    "type": "text_prompt_ext",
+    "message0": "%1 %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "TYPE",
+        "options": [
+          [
+            "%{BKY_TEXT_PROMPT_TYPE_TEXT}",
+            "TEXT"
+          ],
+          [
+            "%{BKY_TEXT_PROMPT_TYPE_NUMBER}",
+            "NUMBER"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "TEXT",
+        "check": "String"
+      }
+    ],
+    "output": "String",
+    "colour": "%{BKY_TEXTS_HUE}",
+    "tooltip": "%{BKY_TEXT_PROMPT_TOOLTIP_TEXT}",
+    "helpUrl": "%{BKY_TEXT_PROMPT_HELPURL}",
+    "TODO(#394)": "https://github.com/google/blockly-android/issues/394"
+  }
+]
